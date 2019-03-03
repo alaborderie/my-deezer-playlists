@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Playlist} from "../../models/playlist";
 
 @Component({
@@ -9,6 +9,7 @@ import {Playlist} from "../../models/playlist";
 export class PlaylistListComponent implements OnInit {
 
   @Input() public playLists: Playlist[];
+  @Output() public scrolled: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 

@@ -1,3 +1,16 @@
-<p>
-  playlist-page works!
-</p>
+<div class="card" *ngIf="playList">
+  <span>
+      <img *ngIf="playList.picture" [src]="playList.picture" alt="PlayList Cover">
+  </span>
+  <span>
+      {{playList.title}}
+  </span>
+  <span *ngIf="playList.creator">
+      {{playList.creator.name}}
+  </span>
+  <span>
+      {{playList.duration}}
+  </span>
+</div>
+
+<app-track-list *ngIf="playList && playList.tracks" [tracks]="playList.tracks.data"></app-track-list>

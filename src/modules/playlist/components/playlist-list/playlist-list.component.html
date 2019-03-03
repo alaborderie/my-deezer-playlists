@@ -1,7 +1,19 @@
-<p>
-  playlist-list works!
-</p>
+<div
+  infiniteScroll
+  (scrolled)="scrolled.emit()"
+  class="container">
 
-<div *ngFor="let playlist of playLists">
-  There is a playlist!
+  <div class="card" *ngFor="let playList of playLists" [routerLink]="'playlist/' + playList.id">
+    <span>
+      <img *ngIf="playList.picture" [src]="playList.picture" alt="PlayList Cover">
+    </span>
+    <span>
+      {{playList.title}}
+    </span>
+    <span *ngIf="playList.creator">
+      {{playList.creator.name}}
+    </span>
+  </div>
+
 </div>
+

@@ -6,6 +6,9 @@ import { TrackListComponent } from './components/track-list/track-list.component
   declarations: [TrackListComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TrackListComponent
   ]
 })
 export class TrackModule { }

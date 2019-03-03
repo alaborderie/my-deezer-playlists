@@ -7,6 +7,7 @@ import {UserModule} from "../modules/user/user.module";
 import {TrackModule} from "../modules/track/track.module";
 import {PlaylistModule} from "../modules/playlist/playlist.module";
 import {HttpClientModule} from "@angular/common/http";
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from "@angular/common/http";
     UserModule,
     PlaylistModule,
     TrackModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

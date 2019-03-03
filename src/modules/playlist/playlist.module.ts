@@ -3,11 +3,17 @@ import { CommonModule } from '@angular/common';
 import { PlaylistListComponent } from './components/playlist-list/playlist-list.component';
 import { PlaylistDetailComponent } from './components/playlist-detail/playlist-detail.component';
 import { PlaylistPageComponent } from './pages/playlist-page/playlist-page.component';
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
+import {RouterModule} from "@angular/router";
+import {TrackModule} from "../track/track.module";
 
 @NgModule({
   declarations: [PlaylistListComponent, PlaylistDetailComponent, PlaylistPageComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    InfiniteScrollModule,
+    RouterModule,
+    TrackModule
   ],
   exports: [PlaylistListComponent]
 })
