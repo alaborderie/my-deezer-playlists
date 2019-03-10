@@ -6,6 +6,7 @@ import { PlaylistPageComponent } from './pages/playlist-page/playlist-page.compo
 import {InfiniteScrollModule} from "ngx-infinite-scroll";
 import {RouterModule} from "@angular/router";
 import {TrackModule} from "../track/track.module";
+import {UtilsModule} from "../utils/utils.module";
 
 @NgModule({
   declarations: [PlaylistListComponent, PlaylistDetailComponent, PlaylistPageComponent],
@@ -13,7 +14,8 @@ import {TrackModule} from "../track/track.module";
     CommonModule,
     InfiniteScrollModule,
     RouterModule,
-    TrackModule
+    TrackModule,
+    UtilsModule
   ],
   exports: [PlaylistListComponent]
 })

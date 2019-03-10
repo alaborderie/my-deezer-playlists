@@ -10,7 +10,7 @@ import {Playlist} from "../../../playlist/models/playlist";
 export class HomePageComponent implements OnInit {
 
   public playLists: any[] = [];
-  public index: number = 0;
+  private index: number = 0;
   public isLoading: boolean = false;
   public isComplete: boolean = false;
 
@@ -43,7 +43,7 @@ export class HomePageComponent implements OnInit {
       }, (error) => {
         this.isLoading = false;
         console.log('Error: ', error);
-      })
+      });
   }
 
 }

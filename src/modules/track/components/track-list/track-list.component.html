@@ -1,3 +1,21 @@
-<div *ngFor="let track of tracks">
-  {{track.title}}
+<div
+  infiniteScroll
+  (scrolled)="scrolled.emit()"
+  class="container-fluid row m-0">
+  <div class="col-12 container-fluid" *ngFor="let track of tracks">
+    <div class="row mt-3">
+      <div class="text-center col-4">
+        <img *ngIf="track.album" [src]="track.album.cover" alt="Album Cover">
+      </div>
+      <div class="text-center flex-center col-3">
+        {{track.title}}
+      </div>
+      <div *ngIf="track.artist" class="text-center flex-center col-3">
+        {{track.artist.name}}
+      </div>
+      <div class="text-center flex-center col-2">
+        {{track.duration}}
+      </div>
+    </div>
+  </div>
 </div>

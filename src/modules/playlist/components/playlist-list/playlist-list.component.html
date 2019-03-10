@@ -1,18 +1,25 @@
 <div
   infiniteScroll
   (scrolled)="scrolled.emit()"
-  class="container">
+  class="container-fluid row m-0">
 
-  <div class="card" *ngFor="let playList of playLists" [routerLink]="'playlist/' + playList.id">
-    <span>
-      <img *ngIf="playList.picture" [src]="playList.picture" alt="PlayList Cover">
-    </span>
-    <span>
-      {{playList.title}}
-    </span>
-    <span *ngIf="playList.creator">
-      {{playList.creator.name}}
-    </span>
+  <div class="col-md-4 col-xs-12 container-fluid" *ngFor="let playList of playLists"
+       [routerLink]="'playlist/' + playList.id">
+    <div class="card m-1">
+      <div class="card-header">
+        <div class="text-center">
+          <img *ngIf="playList.picture" [src]="playList.picture" alt="PlayList Cover">
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="text-center">
+          {{playList.title}}
+        </div>
+        <div *ngIf="playList.creator" class="text-center">
+          {{playList.creator.name}}
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>

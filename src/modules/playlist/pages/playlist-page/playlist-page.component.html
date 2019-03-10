@@ -1,16 +1,8 @@
-<div class="card" *ngIf="playList">
-  <span>
-      <img *ngIf="playList.picture" [src]="playList.picture" alt="PlayList Cover">
-  </span>
-  <span>
-      {{playList.title}}
-  </span>
-  <span *ngIf="playList.creator">
-      {{playList.creator.name}}
-  </span>
-  <span>
-      {{playList.duration}}
-  </span>
+<app-playlist-detail [playList]="playList"></app-playlist-detail>
+<app-track-list [tracks]="tracks" (scrolled)="onScroll()"></app-track-list>
+<div *ngIf="isLoading" class="text-center">
+  New data is loading... please wait!
 </div>
-
-<app-track-list *ngIf="playList && playList.tracks" [tracks]="playList.tracks.data"></app-track-list>
+<div *ngIf="isComplete" class="text-center">
+  No more data to fetch
+</div>

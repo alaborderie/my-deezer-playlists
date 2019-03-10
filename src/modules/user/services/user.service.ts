@@ -7,7 +7,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class UserService {
 
-  private limit: number = 30;
+  private limit: number = 15;
 
   constructor(private http: HttpClient) {
   }

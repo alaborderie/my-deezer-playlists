@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 })
 export class PlaylistService {
 
-  private limit: number = 30;
+  private limit: number = 10;
 
   constructor(private http: HttpClient) {
   }

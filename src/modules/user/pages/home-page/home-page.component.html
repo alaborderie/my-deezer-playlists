@@ -1,8 +1,8 @@
 <app-playlist-list [playLists]="playLists" (scrolled)="onScroll()">
 </app-playlist-list>
-<div *ngIf="isLoading">
+<div *ngIf="isLoading" class="text-center">
   New data is loading... please wait!
 </div>
-<div *ngIf="isComplete">
+<div *ngIf="isComplete" class="text-center">
   No more data to fetch
 </div>

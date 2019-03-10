@@ -7,6 +7,7 @@ export class Playlist {
   public picture: string;
   public title: string;
   public creator: Creator;
+  public duration: number;
 
   constructor(tracks: Track[] = [], title: string, creator: Creator, picture?: string) {
     this.tracks = tracks;
